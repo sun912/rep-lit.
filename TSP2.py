@@ -19,30 +19,25 @@ def next_permutation(a):
 
 
 n = int(input())
-w = [list(map(int,input().split())) for _ in range(n)]
+w = [list(map(int, input().split())) for _ in range(n)]
 d = list(range(n))
 ans = 2147483647
 
 while True:
   ok = True
   s = 0
-  
   for i in range(0,n-1):
     if w[d[i]][d[i+1]] == 0:
       ok = False
       break
     else:
       s += w[d[i]][d[i+1]]
-  
   if ok and w[d[-1]][d[0]] != 0:
     s += w[d[-1]][d[0]]
-    ans = min(ans,s)
-  
+    ans = min(ans, s)
   if not next_permutation(d):
     break
-  
   if d[0] != 0:
     break
-print(ans)
 
-  
+print(ans)
