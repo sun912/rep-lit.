@@ -27,6 +27,3 @@ print(' '.join(map(str,a)))
 while next_permutation(a):
   np = a
   print(' '.join(map(str,np)))
-
-
-

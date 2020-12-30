@@ -20,9 +20,4 @@ def prev_permutation(a):
   return True
 
 n = int(input())
-a = list(map(int, input().split()))
 
-if prev_permutation(a):
-  print(' '.join(map(str, a)))
-
-else: print(-1)
