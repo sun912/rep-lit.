@@ -20,20 +20,34 @@ def next_permutation(a):
     return True
 
 
+def calc(a):
+  ans = 0
+  for k in range(len(a)-1):
+    ans += abs(a[k]-a[k+1])
+  
+  return ans
+
 n = int(input())
 if n > 8:
   exit()
   
 a = list(map(int, input().split()))
+ans = 0
 a.sort()
-total = 0
-temp = 0
-while next_permutation(a):
-    for k in range(len(a)-1):
-        temp += abs(a[k] - a[k + 1])
+# temp = 0
+# while next_permutation(a):
+#     for k in range(len(a)-1):
+#         temp += abs(a[k] - a[k + 1])
 
-    if temp > total:
-        total = temp
-    temp = 0
+#     if temp > total:
+#         total = temp
+#     temp = 0
 
-print(total)
+"""==================="""
+while True:
+  temp = calc(a)
+  ans = max(ans,temp)
+  if not next_permutation(a):
+    break
+    
+print(ans)
