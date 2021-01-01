@@ -20,7 +20,7 @@ def next_permutation(a):
 
 def div(a,b):
   if a>=0:
-    return a//b
+    return (a//b)
   else:
     return -(-a//b)
 
@@ -35,7 +35,7 @@ def calc(a,b):
     elif b[i-1] == 2:
       ans *= a[i]
     else:
-      ans = div(ans,a[i])
+      div(ans,a[i])
   return ans
 
 n = int(input())
@@ -54,7 +54,6 @@ while True:
   ans.append(temp)
   if not next_permutation(b):
     break
-    
 ans.sort()
 print(ans[-1])
 print(ans[0])
