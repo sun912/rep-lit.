@@ -1,4 +1,6 @@
-n, s = map(int, input().split())
+n, s = int(input().split())
+if n < 1 or n > 20:
+  quit()
 nums = list(map(int,input().split()))
 ans = 0
 
@@ -14,6 +16,6 @@ def go(i, sum):
 go(i = 0, sum = 0)
 if s==0:
   ans -= 1
-
 print(ans)
+
 
