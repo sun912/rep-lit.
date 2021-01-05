@@ -1,19 +1,10 @@
-n, s = map(int, input().split())
-nums = list(map(int,input().split()))
-ans = 0
+def go(a,i,cur,plus,minus,mul,div):
+  
 
-def go(i, sum):
-  global ans
-  if i == n:
-    if sum == s:
-      ans += 1
-    return
-  go(i+1,sum+nums[i])
-  go(i+1,sum)
 
-go(i = 0, sum = 0)
-if s==0:
-  ans -= 1
 
-print(ans)
+n = int(input())
+nums = list(map(int, input().split()))
+plus,minus,mul,div = list(map(int, input().split()))
 
+go(nums,0,0,plus,minus,mul,div)
