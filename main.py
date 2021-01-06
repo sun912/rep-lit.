@@ -1,10 +1,11 @@
-def go(a,i,cur,plus,minus,mul,div):
-  
+n, s = map(int, input().split())
+numbers = list(map(int,input().split()))
+ans = 0
 
+for i in range(1,(1<<n)):
+  m = sum(numbers[k] for k in range(n) if (i &(1<<k))>0 )
 
+  if m == s:
+    ans += 1
 
-n = int(input())
-nums = list(map(int, input().split()))
-plus,minus,mul,div = list(map(int, input().split()))
-
-go(nums,0,0,plus,minus,mul,div)
+print(ans)
