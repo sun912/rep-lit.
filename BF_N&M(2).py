@@ -11,7 +11,8 @@ def go(index,start, n, m):
     return
   
   for i in range(start,n+1):
-    a[index] = i
+    if i > a[start]:
+      a[index] = i
     go(index+1,i+1,n,m)
                             
 go(0,1,n,m)
