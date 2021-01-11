@@ -25,5 +25,3 @@ go(0,n,m)
 d = sorted(list(set(d)))
 for v in d:
   sys.stdout.write(' '.join(map(str,v))+'\n')
-
-
