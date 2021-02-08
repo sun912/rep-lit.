@@ -43,6 +43,6 @@ for i in range(n):
       d[i][j+a[i][j]] += d[i][j]
     
     if i + a[i][j] < n:
-      d[i+a[i][j]][j] += d[i][j]
+      d[i+a[i][j]] += d[i][j]
 
 print(d[n-1][n-1])
